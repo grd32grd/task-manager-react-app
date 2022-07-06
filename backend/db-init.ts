@@ -55,7 +55,7 @@ let db: any;
 MongoClient.connect("mongodb://localhost:27017/", function(err: any, client: any) {
 	if(err) throw err;	
 
-	db = client.db("taskmanager-react");
+	db = client.db("taskmanager");
   
 	db.listCollections().toArray(function(err: any, result: any){
 		if(result.length == 0){
